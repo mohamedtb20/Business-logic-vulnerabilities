@@ -1,0 +1,16 @@
+lab : https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-low-level
+
+the dev team block you to request a more than a number of product but the flaw is you can request the legal quantity a multiple time 
+which allows you to request big quantitie when we do that the prices are going crazy because is out of the website controll then the amount (the price can be positif or negatif ) and when you attemp the negative price you can get another product with less money than it cost
+
+vulnirabilty : you can request the legal number of quantity a multiple time
+
+steps :
+1-Login with wiener credentials 
+2-go to a product with the price less than 100$
+3- add the product to your shop
+4-go to your shop and buy the product and send the post request to burp suite repeater
+3-add the legal quantity 99 for one product
+4-set a null payload which can request the same post request we have a multiple time 
+5-you refresh the web page until getting a negative number
+6-then you can buy a bunsh of jacket until the amount you should bye is positif and less than 100$

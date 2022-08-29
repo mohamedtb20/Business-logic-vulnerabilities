@@ -1,0 +1,10 @@
+lab : https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic
+
+vulnirability ; you can go from your 2fa verification step to another user 2fa verification step and Login
+
+steps :
+1-login with wiener credential 
+2-put the mfa code and send the post request to burp intruder
+3-you can see a parameter named verify = wiener which is our username
+4-change the verify parameter to carlos
+5-brute force the mfa code to get the carlos mfa code

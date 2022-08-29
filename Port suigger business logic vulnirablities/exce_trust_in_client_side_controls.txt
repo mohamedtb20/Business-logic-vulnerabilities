@@ -1,0 +1,15 @@
+lab : https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls
+
+That means when the dev team trust the client side for exemple they think that that users will only interact with the application via the provided web interface.bur that a flaw an attacker can easly input a malisious thing and go to the server side .
+In this lab we have a flaw in the purshasing fase the application doesn't adequatly validate a user input
+
+vulnirability : you can chnage the price of the product before purshasing it
+
+steps :
+1-Login with wiener credentials 
+2-go to Lightweight l33t leather jacket product
+3- add the product to your shop
+4-go to your shop and buy the product and send the post request to burp suite repeater
+5-you can see that you can change the price = .... to less than the price in your wallet
+finnaly
+you can bye the Lightweight l33t leather jacket product by less than 100$
